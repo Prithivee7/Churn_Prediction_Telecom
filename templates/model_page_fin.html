@@ -1,0 +1,190 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <title>Churn Prediction</title>
+    <div class="container">
+        <div class="row">
+
+            <form action="/model" method="POST">
+                <div class="col-sm-9">
+                    <div>
+                        <label for="comment">SeniorCitizen:</label>
+                        <select name="query1" id="query1">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Gender :</label>
+                        <select name="query4" id="query4">
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Partner :</label>
+                        <select name="query5" id="query5">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Dependents :</label>
+                        <select name="query6" id="query6">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Phone service :</label>
+                        <select name="query7" id="query7">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Multiple lines :</label>
+                        <select name="query8" id="query8">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="No phone service">No phone</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Internet Service :</label>
+                        <select name="query9" id="query9">
+                            <option value="Fiber optic">Fiber optic</option>
+                            <option value="No">No</option>
+                            <option value="DSL">DSL</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Online security :</label>
+                        <select name="query10" id="query10">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="No internet service">No internet service</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Online backup :</label>
+                        <select name="query11" id="query11">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="No internet service">No internet service</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Device protection :</label>
+                        <select name="query12" id="query12">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="No internet service">No internet service</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Tech Support :</label>
+                        <select name="query13" id="query13">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="No internet service">No internet service</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Streaming TV:</label>
+                        <select name="query14" id="query14">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="No internet service">No internet service</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Streaming Movies:</label>
+                        <select name="query15" id="query15">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="No internet service">No internet service</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Contract :</label>
+                        <select name="query16" id="query16">
+                            <option value="One year">One year</option>
+                            <option value="Two year">Two year</option>
+                            <option value="Month-to-month">Month-to-month</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Paperless billing :</label>
+                        <select name="query17" id="query17">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment">Payment Method :</label>
+                        <select name="query18" id="query18">
+                            <option value="Electronic check">Electronic Check</option>
+                            <option value="Mailed check">Mailed Check</option>
+                            <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+                            <option value="Credit card (automatic)">Credit card (automatic)</option>
+                        </select>
+                    </div>
+                    <br>
+                    
+                    <div class="form-group  purple-border">
+                        <label for="comment">MonthlyCharges:</label>
+                        <textarea class="form-control" rows="2" id="query2" name="query2" rows="2" cols="5"
+                            autofocus>{{query2}}</textarea>
+                    </div>
+                    <div class="form-group  purple-border">
+                        <label for="comment">TotalCharges:</label>
+                        <textarea class="form-control" rows="2" id="query3" name="query3" rows="2" cols="5"
+                            autofocus>{{query3}}</textarea>
+                    </div>
+                    <div class="form-group  purple-border">
+                        <label for="comment">tenure:</label>
+                        <textarea class="form-control" rows="2" id="query19" name="query19" rows="2" cols="5"
+                            autofocus>{{query19}}</textarea>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-9">
+                <textarea class="form-control" rows="2" id="comment" name="query6" rows="2" cols="5"
+                    autofocus>{{output1}}</textarea>
+                <textarea class="form-control" rows="2" id="comment" name="query7" rows="2" cols="5"
+                    autofocus>{{output2}}</textarea>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

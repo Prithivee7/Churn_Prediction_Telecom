@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Experimental Data Analysis</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../static/w3.css">
+<link rel="stylesheet" href="../static/css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Poppins", sans-serif
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+
+    .w3-half img:hover {
+        opacity: 1
+    }
+</style>
+
+<body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>Experimental<br>Data Analysis</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Bivariate analysis</a>
+            <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Univariate
+                analysis</a>
+            <a href="#correlation" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Correlation
+                analysis</a>
+            <a href="#conclusion" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Conclusion</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>Company Name</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+        
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Bivariate analysis</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <img src="../static/bivariate_contract_gender_churn.png" style="width:100%" onclick="onClick(this)"
+                    alt="Bivariate analysis of churn, contract and gender">
+                <img src="../static/bivariate_partner_gender_churn.png" style="width:100%" onclick="onClick(this)"
+                    alt="Bivariate analysis of churn, partner and gender ">
+                <img src="../static/bivariate_partner_gender_non_churn.png" style="width:100%" onclick="onClick(this)"
+                    alt="Bivariate analaysis of non-churn partner and gender">
+            </div>
+
+            <div class="w3-half">
+                <img src="../static/bivariate_payment_gender_churn.png" style="width:100%" onclick="onClick(this)"
+                    alt="Bivariate analysis of churn, payment and gender">
+                <img src="../static/bivariate_seniorcitizen_gender_churn.png" style="width:100%" onclick="onClick(this)"
+                    alt="Bivariate analysis of churn, senior citizen and gender">
+                <img src="../static/bivariate_techsupport_gender_churn.png" style="width:100%" onclick="onClick(this)"
+                    alt="Bivariate analysis of churn, tech support and gender">
+            </div>
+        </div>
+
+        <div class="w3-container" style="margin-top:80px" id="services">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Univariate analysis</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+
+        <!-- Services -->
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <img src="../static/univariate_churn_fiber_optic.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analyis of churn and fiber optics">
+                <img src="../static/univariate_churn_gender.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analyis of churn and gender">
+                <img src="../static/univariate_churn_online_backup.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis of churn and online backup">
+                <img src="../static/univariate_churn_paperless_billing.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis pf churn and paperless billing">
+                <img src="../static/univariate_churn_partner.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis of churn and partner">
+                <img src="../static/univariate_churn_payment_method.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analyis of churn and payment method">
+                <img src="../static/univariate_churn_phoneservice.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis of churn and phone service">
+                <img src="../static/univariate_churn_senior_citizen.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis of churn and senior citizen">
+            </div>
+
+            <div class="w3-half">
+                <img src="../static/univariate_churn_streaming_movies.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis of churn and streaming movies">
+                <img src="../static/univariate_churn_streaming_tv.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis of churn and streaming tv">
+                <img src="../static/univariate_churn_tech_support.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis of churn and tech support">
+                <img src="../static/univariate_churn_tenure_group.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis of churn and tenure group">
+                <img src="../static/univariate_churn_contract.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis of churn and contract">
+                <img src="../static/univariate_churn_dependents.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis of churn and dependents">
+                <img src="../static/univariate_churn_multiplelines.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis of churn and multiple lines">
+                <img src="../static/univariate_churn_online_security.png" style="width:100%" onclick="onClick(this)"
+                    alt="Univariate analysis of churn and online security">
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="correlation">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Correlation analysis</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+                
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+            <div>
+                <img src="../static/heat_map.png" style="width:100%" onclick="onClick(this)"
+                    alt="Heat map describing Correlation">
+                <img src="../static/correlation_bar.png" style="width:100%" onclick="onClick(this)"
+                    alt="Correlation of variables with churn">
+            </div>
+        </div>
+
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <div class="w3-container" style="margin-top:80px" id="conclusion">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Conclusion</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+        <div class="w3-twothird">
+            <h5 class="w3-padding-32">
+                1. No Online security, No Tech Support category are high churners<br>
+                2. Non senior Citizens are high churners<br>
+                3. Electronic check medium are the highest churners<br>
+                4. Contract Type - Monthly customers are more likely to churn because of no contract terms, as they are free to go
+                customers.
+            </h5>
+        </div>
+    
+    </div>
+
+
+
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
+
+</body>
+
+</html>
